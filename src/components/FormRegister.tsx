@@ -1,6 +1,9 @@
 import "../assets/sass/login.scss";
 
-export function FormRegister() {
+type PropsFormRegister = {
+  handleLogin: () => void;
+};
+export function FormRegister(props: PropsFormRegister) {
   return (
     <div className="left">
       <form method="post" className="form">
@@ -17,6 +20,9 @@ export function FormRegister() {
 
         <button className="btn-send" type="submit">
           Cadastrar
+        </button>
+        <button className="link" onClick={props.handleLogin}>
+          Logar
         </button>
       </form>
     </div>

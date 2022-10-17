@@ -10,11 +10,18 @@ export function LoginPage() {
   const handleRegister = () => {
     setIsSignIn(!isSingIn);
   };
+  const handleLogin = () => {
+    setIsSignIn(true);
+  };
   return (
     <div className="container-login">
       <div className="content-login">
         <div className="left">
-          {isSingIn ? <FormLogin /> : <FormRegister />}
+          {isSingIn ? (
+            <FormLogin handleRegister={handleRegister} />
+          ) : (
+            <FormRegister handleLogin={handleLogin} />
+          )}
         </div>
         <div className="right">
           <h2 className="title">Julius Finances</h2>

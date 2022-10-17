@@ -67,7 +67,7 @@
     border: 1px solid #cccc;
   }
 }
-.form button {
+.form .btn-send {
   @include btnTheme;
   margin-top: 1rem;
   padding: 0.7rem;
@@ -112,4 +112,19 @@
   color: $black;
   font-size: 1.5rem;
   font-weight: 700;
+}
+.link {
+  border: 0;
+  background: $green;
+  color: $white-primary;
+  text-align: center;
+  padding-top: 1rem;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: ease 0.1;
+  }
+  @media only screen and (min-width: 730px) {
+    display: none;
+  }
 }
