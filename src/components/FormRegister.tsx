@@ -4,7 +4,7 @@ export function FormRegister() {
   return (
     <div className="left">
       <form method="post" className="form">
-        <h2 className="title">Registrar</h2>
+        <h2 className="title">Registre-se</h2>
         <span>Preencha os campos corretamente</span>
         <label htmlFor="name">Nome</label>
         <input type="text" id="name" name="name" />
