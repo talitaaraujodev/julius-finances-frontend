@@ -26,7 +26,7 @@ export function LoginPage() {
         <div className="right">
           <h2 className="title">Julius Finances</h2>
           <img src={loginImg} alt="Image Login" />
-          <span>Organização finanças pessoal</span>
+          <span>Organização de finanças pessoais</span>
           <button className="btn-register" onClick={handleRegister}>
             {isSingIn ? "Registre-se" : "Logar"}
           </button>
