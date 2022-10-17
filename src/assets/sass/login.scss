@@ -64,7 +64,7 @@
   border: 0;
   padding: 0.4rem;
   &:focus {
-    border: 2px solid #cccc;
+    border: 1px solid #cccc;
   }
 }
 .form button {
@@ -112,17 +112,4 @@
   color: $black;
   font-size: 1.5rem;
   font-weight: 700;
-}
-.link-register {
-  color: $white-primary;
-  text-align: center;
-  padding-top: 1rem;
-  &:hover {
-    color: #0984e3;
-    cursor: pointer;
-    transition: ease 0.1;
-  }
-  @media only screen and (min-width: 730px) {
-    display: none;
-  }
 }
