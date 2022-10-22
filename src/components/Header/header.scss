@@ -1,0 +1,17 @@
+@import "../../assets/sass/variables.scss";
+.header {
+  background: $green-primary;
+  color: #fff;
+  padding: 2rem 0 2.7rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.header svg {
+  margin-left: 1rem;
+}
+.title-header {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: auto;
+}

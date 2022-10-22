@@ -1,11 +1,13 @@
-import "../assets/sass/home.scss";
 import {
-  UilAlignJustify,
   UilDollarSignAlt,
   UilMoneyBill,
   UilCoins,
   UilAnalysis,
 } from "@iconscout/react-unicons";
+import { Chart } from "../../components/Chart";
+import { Header } from "../../components/Header/Header";
+import { chart } from "../../utils/chart";
+import "./home.scss";
 
 export function HomePage() {
   const cards = [
@@ -34,12 +36,9 @@ export function HomePage() {
       value: "R$: 1.600,00",
     },
   ];
+
   return (
     <div className="container-home">
-      <div className="header">
-        <UilAlignJustify />
-        <h5 className="title-header">Julius Finances</h5>
-      </div>
       <div className="content-home">
         <div className="cards">
           {cards.map((item) => (
@@ -50,6 +49,23 @@ export function HomePage() {
               <span>{item.value}</span>
             </div>
           ))}
+          <section className="section-charts">
+            <h2>Fluxo do caixa</h2>
+            <div className="charts">
+              <Chart
+                options={chart.chartMensal.options}
+                series={chart.chartMensal.series}
+                width={"540"}
+                type={"bar"}
+              />
+              <Chart
+                options={chart.chartDiario.options}
+                series={chart.chartDiario.series}
+                width={"540"}
+                type={"line"}
+              />
+            </div>
+          </section>
         </div>
       </div>
     </div>

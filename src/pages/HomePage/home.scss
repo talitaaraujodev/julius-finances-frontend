@@ -1,26 +1,11 @@
-@import "./variables.scss";
+@import "../../assets/sass/variables.scss";
 .container-home {
-  background: $white-secondary;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
 }
 .content-home {
   margin: auto;
   max-width: 980px;
-}
-.header {
-  background: $green-primary;
-  color: #fff;
-  padding: 2rem 0 2.7rem;
-  display: flex;
-  align-items: center;
-}
-.header svg {
-  margin-left: 1rem;
-}
-.title-header {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin: auto;
 }
 
 .content-home .cards {
@@ -40,6 +25,11 @@
   height: 8rem;
   padding: 1rem;
   margin: 7px;
+  &:hover {
+    background: #605bc2;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
 }
 .cards .card strong {
   font-size: 1.3rem;
@@ -49,4 +39,20 @@
 }
 .cards .card svg {
   margin-left: 0.3rem;
+}
+.section-charts {
+  display: inline;
+}
+.charts {
+  display: flex;
+  padding-top: 1.8rem;
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.section-charts h2 {
+  color: #999;
+  text-align: center;
+  font-size: 1.7rem;
 }

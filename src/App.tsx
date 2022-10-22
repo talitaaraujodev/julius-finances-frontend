@@ -2,5 +2,9 @@ import "./assets/sass/global.scss";
 import { MainRoutes } from "./routes/Routes";
 
 export function App() {
-  return <MainRoutes />;
+  return (
+    <div className="container-main">
+      <MainRoutes />
+    </div>
+  );
 }

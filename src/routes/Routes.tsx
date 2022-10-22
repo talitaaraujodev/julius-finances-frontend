@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HomePage } from "../pages/HomePage";
+import { Layout } from "../components/layout/Layout";
+import { HomePage } from "../pages/HomePage/HomePage";
 import { LoginPage } from "../pages/LoginPage";
 
 export function MainRoutes() {
@@ -7,7 +8,9 @@ export function MainRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route element={<Layout />}>
+          <Route path="/home" element={<HomePage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
